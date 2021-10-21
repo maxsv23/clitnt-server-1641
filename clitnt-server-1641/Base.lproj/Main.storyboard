@@ -16,16 +16,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iF0-zv-9Pq">
-                                <rect key="frame" x="159" y="341" width="96" height="49"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="41"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iF0-zv-9Pq">
+                                <rect key="frame" x="185" y="410.5" width="44" height="21.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yBu-8r-m1W">
-                                <rect key="frame" x="159" y="453" width="96" height="49"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yBu-8r-m1W">
+                                <rect key="frame" x="107" y="455" width="199" height="49"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="41"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -33,6 +31,13 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="trs-tb-fOY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="yBu-8r-m1W" firstAttribute="width" secondItem="w0e-d7-BC2" secondAttribute="width" multiplier="0.480676" id="2fI-b2-G7m"/>
+                            <constraint firstItem="iF0-zv-9Pq" firstAttribute="centerX" secondItem="w0e-d7-BC2" secondAttribute="centerX" id="E36-la-IVJ"/>
+                            <constraint firstItem="iF0-zv-9Pq" firstAttribute="centerY" secondItem="w0e-d7-BC2" secondAttribute="centerY" id="HZ6-1o-ipL"/>
+                            <constraint firstItem="yBu-8r-m1W" firstAttribute="top" secondItem="iF0-zv-9Pq" secondAttribute="bottom" constant="23" id="KIg-eV-yI5"/>
+                            <constraint firstItem="yBu-8r-m1W" firstAttribute="leading" secondItem="trs-tb-fOY" secondAttribute="leading" constant="107" id="cM5-Ae-n6p"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="m3B-Aq-Gy7"/>
                     <connections>
@@ -42,7 +47,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="trQ-qW-EmH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1720" y="155"/>
+            <point key="canvasLocation" x="1718.840579710145" y="154.6875"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="SKT-3H-Qg9">
@@ -52,10 +57,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iyv-sw-QeV">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iyv-sw-QeV">
                                 <rect key="frame" x="126" y="380" width="162" height="136"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="iyv-sw-QeV" secondAttribute="height" multiplier="81:68" id="F0F-uS-khi"/>
+                                    <constraint firstAttribute="width" constant="162" id="fKM-Mo-rh0"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
                                 <connections>
@@ -65,6 +73,11 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="1Ji-oC-raD"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="iyv-sw-QeV" firstAttribute="centerY" secondItem="L3Q-X6-V3t" secondAttribute="centerY" id="7kD-Ds-Kft"/>
+                            <constraint firstItem="iyv-sw-QeV" firstAttribute="width" secondItem="1Ji-oC-raD" secondAttribute="width" multiplier="0.391304" id="U36-W4-vXz"/>
+                            <constraint firstItem="iyv-sw-QeV" firstAttribute="centerX" secondItem="L3Q-X6-V3t" secondAttribute="centerX" id="sCb-il-X5e"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xjG-RN-UYA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -79,10 +92,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A7f-tH-68x">
-                                <rect key="frame" x="126" y="380" width="162" height="136"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A7f-tH-68x">
+                                <rect key="frame" x="126" y="353" width="162" height="136"/>
                                 <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="A7f-tH-68x" secondAttribute="height" multiplier="81:68" id="S9Q-pk-zqa"/>
+                                    <constraint firstAttribute="width" constant="162" id="xhA-Ks-Qj0"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
                                 <connections>
@@ -92,6 +108,11 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="VM2-xw-ber"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="A7f-tH-68x" firstAttribute="centerY" secondItem="Zfg-Ow-x1V" secondAttribute="centerY" id="Jru-8Z-at4"/>
+                            <constraint firstItem="A7f-tH-68x" firstAttribute="width" secondItem="Zfg-Ow-x1V" secondAttribute="width" multiplier="0.391304" id="nkY-yh-PvN"/>
+                            <constraint firstItem="A7f-tH-68x" firstAttribute="centerX" secondItem="Zfg-Ow-x1V" secondAttribute="centerX" id="rFu-IM-Mej"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="zOP-x1-PPS"/>
                 </viewController>

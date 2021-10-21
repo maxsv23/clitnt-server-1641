@@ -20,9 +20,9 @@ class ViewController: UIViewController {
     
     // нажал кнопку жизненый цикл продолжится и userId будет равен другому значению
     
-    //  override func viewWillAppear(_ animated: Bool) {
-    //      session.userId = 4
-     // }
+      override func viewWillAppear(_ animated: Bool) {
+         session.userId = 4
+     }
       
      // override func viewDidAppear(_ animated: Bool) {
      //    session.userId = 5
