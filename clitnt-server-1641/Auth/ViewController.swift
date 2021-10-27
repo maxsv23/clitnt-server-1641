@@ -19,8 +19,7 @@ class ViewController: UIViewController, WKNavigationDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        authorizeToVKAPI()
-        
+       authorizeToVKAPI()
         
 
     }
@@ -63,15 +62,12 @@ class ViewController: UIViewController, WKNavigationDelegate {
 
         guard let token = params["access_token"], let userID = params["user_id"] else {return}
 
-        //print(token)
 
         Session.shared.token = token
         Session.shared.userID = userID
         decisionHandler(.cancel)
         
-        
-        let fff = FrindsAPI()
-         fff.getFriens() 
+        FriendsAPI().jsonString()
     }
 
 }
