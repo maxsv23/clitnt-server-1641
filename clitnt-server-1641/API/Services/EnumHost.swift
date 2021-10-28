@@ -19,6 +19,7 @@ class EnumHost {
         case friends = "/method/friends.get"
         case groups = "/method/groups.get"
         case groupsSearch = "/method/groups.search"
+        case photos = "/method/photos.getAll"
     }
 
     

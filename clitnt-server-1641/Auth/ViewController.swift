@@ -12,6 +12,7 @@ class ViewController: UIViewController, WKNavigationDelegate {
 
     @IBOutlet weak var webview: WKWebView! {
         didSet {
+            
             webview.navigationDelegate = self
         }
     }
@@ -19,10 +20,16 @@ class ViewController: UIViewController, WKNavigationDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-       authorizeToVKAPI()
-        
+    authorizeToVKAPI()
+    
 
+        ///запускать нужно после авторизации )))) когда получим ключ  от вк
+        ///FriendsAPI().jsonString()
+        ///ну а пока можно запускать для теста после авторизации ))))
+        
     }
+  
+
 
     func authorizeToVKAPI() {
 
@@ -67,7 +74,20 @@ class ViewController: UIViewController, WKNavigationDelegate {
         Session.shared.userID = userID
         decisionHandler(.cancel)
         
-        FriendsAPI().jsonString()
+        /// ТУТ ТЕСТОВЫЕ запуски получения JSON стринг
+        /// FriendsAPI().jsonString()
+        ///
+        ///
+        print("************* TEST OK ******************")
+        //GetFriends().jsonString()
+        print("************* TEST OK ******************")
+        //GetGroups().jsonString()
+        print("************* TEST OK ******************")
+        //GetGroupsSeatch().jsonString()
+        print("************* TEST OK ******************")
+        //GetPhotos().jsonString()
+        print("************* TEST OK ******************")
+    
     }
 
 }

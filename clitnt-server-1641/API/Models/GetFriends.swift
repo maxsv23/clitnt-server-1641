@@ -7,21 +7,18 @@
 //Быстрый поиск cmd shift + o
 //снипиты
 // переименовать в БЛОКЕ выделить слово - cmd + ctrl + e
-// коментарий для встроеной справки нажать на строку CMD + opt + /    тоже самое можно сделать /// три слеша это дескрипшен будет  в строке ниже /// будет описание параметров
+// коментарий для встроеной справки нажать на строку CMD + opt + /    тоже самое можно сделать
+/// три слеша это дескрипшен будет  в строке ниже будет описание параметров
 
 import Foundation
 
-class FriendsAPI {
+class GetFriends {
     
     let host:String
     let path:String
     let params: [String: String]
     let userID:String
     let token:String
-    
-    
-    
-    
     
     init(){
         // enum rawValue получаем значение по enum
@@ -33,7 +30,7 @@ class FriendsAPI {
             "user_id" : userID,
             "order": "name",
             "fields" : "nickname",
-            "count": "1",
+            "count": "3",
             "access_token" : token,
             "v" : "5.81"
         ]
@@ -44,41 +41,29 @@ class FriendsAPI {
     
     func getUrlForFriendsAPI() -> URL? {
         
-        
         let urlAbsolute = UrlBuilderRequest.urlBuilderRequest(host: host, path: path, params: params)
         
         return urlAbsolute
-        
-        
-        //    guard let url = UrlBuilderRequest.urlBuilderRequest(host: host , path: path, params: params) { urlForGetRequest in
-        //        return urlForGetRequest
-        //    } else { return }
-        //
         ///  знак вопроса это отложенный вызов
         /// ВЫЗОВ таких функций fff?(222)
-        
-        ///     func ff (_ number: Int) -> () {
-        ///
-        ///     }
+        ///     func ff (_ number: Int) -> () {    }
         /// тоже самое что и
-        ///
         ///var fff: ((_ number: Int) -> ())?
-        ///
-        
     }
     
     func jsonString () {
-        guard let urlAbsolute = UrlBuilderRequest.urlBuilderRequest(host: host, path: path, params: params) else { return }
+        guard let url = UrlBuilderRequest.urlBuilderRequest(host: host, path: path, params: params) else { return }
         
-        print(token)
-        print(urlAbsolute)
-        
-        GetRequest.getRequest(url: urlAbsolute){ (json, error) in
-            print("***************")
+        GetRequest.getRequest(url: url){ (json, error) in
+            
+//            guard let json = json else {
+//                return
+//            }
+//            guard let error = error else {
+//                return
+//            }
             print(json)
-            print("***************")
             print(error)
         }
-        }
-        
     }
+}
