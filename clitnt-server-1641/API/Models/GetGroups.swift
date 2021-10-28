@@ -11,23 +11,15 @@ class GetGroups {
     
     let host:String
     let path:String
-    let params: [String: String]
-    let userID:String
-    let token:String
+    var params: [String: String]
     
     init(){
         // enum rawValue получаем значение по enum
         self.host = EnumHost.BaseURL.api.rawValue
         self.path = EnumHost.Urlmodule.groups.rawValue
        
-        self.token = Session.shared.token
-        self.userID = Session.shared.userID
         self.params = [
-            "user_id" : userID,
-            "access_token":token,
-            //"filter": "",
             "count" : "3",
-            //"fields": "",
             "extended": "1",
             "v" : "5.81"
         ]

@@ -9,39 +9,23 @@ import Foundation
 
 class GetJson {
 
-    /// передаем подготовленный URL
-    /// ждем клоужер-замыкание  (ждем пока не обработается есть маркер @escaping)
-
-    /// 10000 раз напомнил значит запомнил )))) Void этот тот же () разницы абсалютно нет можно проверить в справке
-    ///
-    ///
-
-    let userID:String
-    let token:String
-    
-    
-    
-    
-    init(){
-        self.token = Session.shared.token
-        self.userID = Session.shared.userID
-    }
-    
-    
-    
-    class func getUrlForFriendsAPI(host:) -> URL? {
-        
-        let urlAbsolute = UrlBuilderRequest.urlBuilderRequest(host: host, path: path, params: params)
-        
-        return urlAbsolute
-    }
+   
+   // class func (сюда прилетает данные) {
+    // вызов функции для получения урл
+    // далее вызываем получение данных
+    //  далее парсим данные
+    //  возвращаем
+    //
+    //
+    //
+//
+//}
     
     
     
     
     
     
-
     class func getRequest(url: URL, completion: @escaping (String?, Error?) -> Void) {
 
         let config = URLSessionConfiguration.default
@@ -56,9 +40,7 @@ class GetJson {
                 return
             }
 
-            guard let data = data else {
-                return
-            }
+            guard let data = data else {return}
 
             let jsonString = String(data: data, encoding: .utf8)
 ///загоняем в МАЙН поток чтобы данные обработались корректно

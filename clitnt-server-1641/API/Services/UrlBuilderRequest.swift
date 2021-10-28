@@ -22,9 +22,8 @@ class UrlBuilderRequest {
     
     class func urlBuilderRequest(host:String, path:String, params : [String:String]) -> URL? {
         
-        let userID:String
-        let token:String
-        
+        let userID = Session.shared.userID
+        let token = Session.shared.token
         
         
         var components = URLComponents()
@@ -32,11 +31,13 @@ class UrlBuilderRequest {
         components.scheme = "https"
         components.host = host
         components.path = path
+             
+        components.setQueryItems(with: params )
         
-        
-        
-        components.setQueryItems(with: params)
-       
+        //добавим токен и id
+        components.queryItems?.append(URLQueryItem(name: "access_token", value: token))
+        components.queryItems?.append(URLQueryItem(name: "user_id", value: userID))
+
         return components.url
         
     }

@@ -11,7 +11,6 @@
 		88126CCB272A87D400E92244 /* GetPhotos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88126CCA272A87D400E92244 /* GetPhotos.swift */; };
 		88126CCD272A880800E92244 /* GetGroups.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88126CCC272A880800E92244 /* GetGroups.swift */; };
 		88126CCF272A885100E92244 /* GetGroupsSeatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88126CCE272A885100E92244 /* GetGroupsSeatch.swift */; };
-		88126CD1272A977900E92244 /* DataFromJsom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88126CD0272A977900E92244 /* DataFromJsom.swift */; };
 		88488DEA271FD86E00D07012 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88488DE9271FD86E00D07012 /* AppDelegate.swift */; };
 		88488DEC271FD86E00D07012 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88488DEB271FD86E00D07012 /* SceneDelegate.swift */; };
 		88488DEE271FD86E00D07012 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88488DED271FD86E00D07012 /* ViewController.swift */; };
@@ -31,7 +30,6 @@
 		88126CCA272A87D400E92244 /* GetPhotos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPhotos.swift; sourceTree = "<group>"; };
 		88126CCC272A880800E92244 /* GetGroups.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetGroups.swift; sourceTree = "<group>"; };
 		88126CCE272A885100E92244 /* GetGroupsSeatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetGroupsSeatch.swift; sourceTree = "<group>"; };
-		88126CD0272A977900E92244 /* DataFromJsom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DataFromJsom.swift; path = ../../../../../DataFromJsom.swift; sourceTree = "<group>"; };
 		88488DE6271FD86E00D07012 /* clitnt-server-1641.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "clitnt-server-1641.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		88488DE9271FD86E00D07012 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		88488DEB271FD86E00D07012 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -149,7 +147,6 @@
 				888D29C827269E2E00A80BDA /* Session.swift */,
 				889C30EC272928C9008EC612 /* UrlBuilderRequest.swift */,
 				889C30EE272938A5008EC612 /* GetJson.swift */,
-				88126CD0272A977900E92244 /* DataFromJsom.swift */,
 				889C30F027294ABC008EC612 /* EnumHost.swift */,
 				88126CC8272A7BA500E92244 /* AuthorizationToVKAPI.swift */,
 			);
@@ -235,7 +232,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				88126CD1272A977900E92244 /* DataFromJsom.swift in Sources */,
 				889C30ED272928C9008EC612 /* UrlBuilderRequest.swift in Sources */,
 				88126CC9272A7BA500E92244 /* AuthorizationToVKAPI.swift in Sources */,
 				88126CCD272A880800E92244 /* GetGroups.swift in Sources */,

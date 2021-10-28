@@ -12,19 +12,15 @@ class GetPhotos {
     let host:String
     let path:String
     var params: [String: String]
-    let userID:String
-    let token:String
+
     
     init(){
         // enum rawValue получаем значение по enum
         self.host = EnumHost.BaseURL.api.rawValue
         self.path = EnumHost.Urlmodule.photos.rawValue
        
-        self.token = Session.shared.token
-        self.userID = Session.shared.userID
+
         self.params = [
-            "user_id" : Session.shared.userID,
-            "access_token":Session.shared.token,
             "extended": "1",
             "owner_id" : "1",
             "count": "3",

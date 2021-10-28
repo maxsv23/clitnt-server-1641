@@ -16,22 +16,18 @@ class GetFriends {
     
     let host:String
     let path:String
-    let params: [String: String]
-    let userID:String
-    let token:String
+    var params: [String: String]
+
     
     init(){
         // enum rawValue получаем значение по enum
         self.path = EnumHost.Urlmodule.friends.rawValue
         self.host = EnumHost.BaseURL.api.rawValue
-        self.token = Session.shared.token
-        self.userID = Session.shared.userID
+
         self.params = [
-            "user_id" : userID,
             "order": "name",
             "fields" : "nickname",
             "count": "3",
-            "access_token" : token,
             "v" : "5.81"
         ]
     }
@@ -42,7 +38,7 @@ class GetFriends {
     func getUrlForFriendsAPI() -> URL? {
         
         let urlAbsolute = UrlBuilderRequest.urlBuilderRequest(host: host, path: path, params: params)
-        
+        print(urlAbsolute!)
         return urlAbsolute
         ///  знак вопроса это отложенный вызов
         /// ВЫЗОВ таких функций fff?(222)
