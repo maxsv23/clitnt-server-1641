@@ -7,15 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		88126CC9272A7BA500E92244 /* AuthorizationToVKAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88126CC8272A7BA500E92244 /* AuthorizationToVKAPI.swift */; };
+		88126CCB272A87D400E92244 /* GetPhotos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88126CCA272A87D400E92244 /* GetPhotos.swift */; };
+		88126CCD272A880800E92244 /* GetGroups.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88126CCC272A880800E92244 /* GetGroups.swift */; };
+		88126CCF272A885100E92244 /* GetGroupsSeatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88126CCE272A885100E92244 /* GetGroupsSeatch.swift */; };
+		88126CD1272A977900E92244 /* DataFromJsom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88126CD0272A977900E92244 /* DataFromJsom.swift */; };
 		88488DEA271FD86E00D07012 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88488DE9271FD86E00D07012 /* AppDelegate.swift */; };
 		88488DEC271FD86E00D07012 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88488DEB271FD86E00D07012 /* SceneDelegate.swift */; };
 		88488DEE271FD86E00D07012 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88488DED271FD86E00D07012 /* ViewController.swift */; };
 		88488DF1271FD86E00D07012 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88488DEF271FD86E00D07012 /* Main.storyboard */; };
 		88488DF3271FD87000D07012 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88488DF2271FD87000D07012 /* Assets.xcassets */; };
 		88488DF6271FD87000D07012 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88488DF4271FD87000D07012 /* LaunchScreen.storyboard */; };
+		888D29C927269E2E00A80BDA /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888D29C827269E2E00A80BDA /* Session.swift */; };
+		888D29CB2726B77E00A80BDA /* GetFriends.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888D29CA2726B77E00A80BDA /* GetFriends.swift */; };
+		889C30EB27292772008EC612 /* URLComponents+setQueryItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889C30EA27292772008EC612 /* URLComponents+setQueryItems.swift */; };
+		889C30ED272928C9008EC612 /* UrlBuilderRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889C30EC272928C9008EC612 /* UrlBuilderRequest.swift */; };
+		889C30EF272938A5008EC612 /* GetJson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889C30EE272938A5008EC612 /* GetJson.swift */; };
+		889C30F127294ABC008EC612 /* EnumHost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889C30F027294ABC008EC612 /* EnumHost.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		88126CC8272A7BA500E92244 /* AuthorizationToVKAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationToVKAPI.swift; sourceTree = "<group>"; };
+		88126CCA272A87D400E92244 /* GetPhotos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPhotos.swift; sourceTree = "<group>"; };
+		88126CCC272A880800E92244 /* GetGroups.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetGroups.swift; sourceTree = "<group>"; };
+		88126CCE272A885100E92244 /* GetGroupsSeatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetGroupsSeatch.swift; sourceTree = "<group>"; };
+		88126CD0272A977900E92244 /* DataFromJsom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DataFromJsom.swift; path = ../../../../../DataFromJsom.swift; sourceTree = "<group>"; };
 		88488DE6271FD86E00D07012 /* clitnt-server-1641.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "clitnt-server-1641.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		88488DE9271FD86E00D07012 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		88488DEB271FD86E00D07012 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +40,12 @@
 		88488DF2271FD87000D07012 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		88488DF5271FD87000D07012 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		88488DF7271FD87000D07012 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		888D29C827269E2E00A80BDA /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
+		888D29CA2726B77E00A80BDA /* GetFriends.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetFriends.swift; sourceTree = "<group>"; };
+		889C30EA27292772008EC612 /* URLComponents+setQueryItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLComponents+setQueryItems.swift"; sourceTree = "<group>"; };
+		889C30EC272928C9008EC612 /* UrlBuilderRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlBuilderRequest.swift; sourceTree = "<group>"; };
+		889C30EE272938A5008EC612 /* GetJson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetJson.swift; sourceTree = "<group>"; };
+		889C30F027294ABC008EC612 /* EnumHost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumHost.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +78,90 @@
 		88488DE8271FD86E00D07012 /* clitnt-server-1641 */ = {
 			isa = PBXGroup;
 			children = (
+				889C30E6272924D5008EC612 /* API */,
+				889C30E5272924BE008EC612 /* Auth */,
+				889C30E4272924A0008EC612 /* Core */,
+				889C30E32729246E008EC612 /* Resources */,
+				889C30E22729243B008EC612 /* Application */,
+			);
+			path = "clitnt-server-1641";
+			sourceTree = "<group>";
+		};
+		889C30E22729243B008EC612 /* Application */ = {
+			isa = PBXGroup;
+			children = (
 				88488DE9271FD86E00D07012 /* AppDelegate.swift */,
 				88488DEB271FD86E00D07012 /* SceneDelegate.swift */,
-				88488DED271FD86E00D07012 /* ViewController.swift */,
-				88488DEF271FD86E00D07012 /* Main.storyboard */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		889C30E32729246E008EC612 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
 				88488DF2271FD87000D07012 /* Assets.xcassets */,
 				88488DF4271FD87000D07012 /* LaunchScreen.storyboard */,
 				88488DF7271FD87000D07012 /* Info.plist */,
 			);
-			path = "clitnt-server-1641";
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		889C30E4272924A0008EC612 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				889C30E92729270D008EC612 /* Extensions */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		889C30E5272924BE008EC612 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				88488DED271FD86E00D07012 /* ViewController.swift */,
+				88488DEF271FD86E00D07012 /* Main.storyboard */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		889C30E6272924D5008EC612 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				889C30E8272924EB008EC612 /* Services */,
+				889C30E7272924E1008EC612 /* Models */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		889C30E7272924E1008EC612 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				888D29CA2726B77E00A80BDA /* GetFriends.swift */,
+				88126CCA272A87D400E92244 /* GetPhotos.swift */,
+				88126CCC272A880800E92244 /* GetGroups.swift */,
+				88126CCE272A885100E92244 /* GetGroupsSeatch.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		889C30E8272924EB008EC612 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				888D29C827269E2E00A80BDA /* Session.swift */,
+				889C30EC272928C9008EC612 /* UrlBuilderRequest.swift */,
+				889C30EE272938A5008EC612 /* GetJson.swift */,
+				88126CD0272A977900E92244 /* DataFromJsom.swift */,
+				889C30F027294ABC008EC612 /* EnumHost.swift */,
+				88126CC8272A7BA500E92244 /* AuthorizationToVKAPI.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		889C30E92729270D008EC612 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				889C30EA27292772008EC612 /* URLComponents+setQueryItems.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +235,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88126CD1272A977900E92244 /* DataFromJsom.swift in Sources */,
+				889C30ED272928C9008EC612 /* UrlBuilderRequest.swift in Sources */,
+				88126CC9272A7BA500E92244 /* AuthorizationToVKAPI.swift in Sources */,
+				88126CCD272A880800E92244 /* GetGroups.swift in Sources */,
+				888D29C927269E2E00A80BDA /* Session.swift in Sources */,
+				888D29CB2726B77E00A80BDA /* GetFriends.swift in Sources */,
+				889C30EB27292772008EC612 /* URLComponents+setQueryItems.swift in Sources */,
+				889C30EF272938A5008EC612 /* GetJson.swift in Sources */,
+				889C30F127294ABC008EC612 /* EnumHost.swift in Sources */,
 				88488DEE271FD86E00D07012 /* ViewController.swift in Sources */,
 				88488DEA271FD86E00D07012 /* AppDelegate.swift in Sources */,
+				88126CCF272A885100E92244 /* GetGroupsSeatch.swift in Sources */,
 				88488DEC271FD86E00D07012 /* SceneDelegate.swift in Sources */,
+				88126CCB272A87D400E92244 /* GetPhotos.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,7 +399,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = S3B44F5R52;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "clitnt-server-1641/Info.plist";
+				INFOPLIST_FILE = "clitnt-server-1641/Resources/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -319,7 +427,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = S3B44F5R52;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "clitnt-server-1641/Info.plist";
+				INFOPLIST_FILE = "clitnt-server-1641/Resources/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
