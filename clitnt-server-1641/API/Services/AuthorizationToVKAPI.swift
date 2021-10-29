@@ -34,14 +34,14 @@ class AuthorizationToVKAPI {
     
     
     
-    func authorizeToVKAPI() {
-
-        var urlComponents = URLComponents()
-        
-        let request = URLRequest(url: urlComponents.url!)
-
-       
-        
-      //  webview.load(request)
-    }
+//    func authorizeToVKAPI() {
+//
+//        var urlComponents = URLComponents()
+//
+//        let request = URLRequest(url: urlComponents.url!)
+//
+//
+//
+//      //  webview.load(request)
+//    }
 }

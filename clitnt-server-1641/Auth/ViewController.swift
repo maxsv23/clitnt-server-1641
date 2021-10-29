@@ -9,30 +9,30 @@ import UIKit
 import WebKit
 
 class ViewController: UIViewController, WKNavigationDelegate {
-
+    
     @IBOutlet weak var webview: WKWebView! {
         didSet {
             
             webview.navigationDelegate = self
         }
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-    authorizeToVKAPI()
-    
-
+        
+        authorizeToVKAPI()
+        
+        
         ///запускать нужно после авторизации )))) когда получим ключ  от вк
         ///FriendsAPI().jsonString()
         ///ну а пока можно запускать для теста после авторизации ))))
         
     }
-  
-
-
+    
+    
+    
     func authorizeToVKAPI() {
-
+        
         var urlComponents = URLComponents()
         urlComponents.scheme = "https"
         urlComponents.host = "oauth.vk.com"
@@ -46,12 +46,12 @@ class ViewController: UIViewController, WKNavigationDelegate {
             URLQueryItem(name: "v", value: "5.68")
         ]
         let request = URLRequest(url: urlComponents.url!)
-
+        
         webview.load(request)
     }
-
+    
     func webView(_ webView: WKWebView, decidePolicyFor navigationResponse: WKNavigationResponse, decisionHandler: @escaping (WKNavigationResponsePolicy) -> Void) {
-
+        
         guard let url = navigationResponse.response.url, url.path == "/blank.html", let fragment = url.fragment  else {
             decisionHandler(.allow)
             return
@@ -66,10 +66,10 @@ class ViewController: UIViewController, WKNavigationDelegate {
                 dict[key] = value
                 return dict
             }
-
+        
         guard let token = params["access_token"], let userID = params["user_id"] else {return}
-
-
+        
+        
         Session.shared.token = token
         Session.shared.userID = userID
         decisionHandler(.cancel)
@@ -79,7 +79,7 @@ class ViewController: UIViewController, WKNavigationDelegate {
         ///
         ///
         print("************* TEST OK ******************")
-        //GetFriends().jsonString()
+        //  GetFriends().jsonString()
         print("************* TEST OK ******************")
         //GetGroups().jsonString()
         print("************* TEST OK ******************")
@@ -87,7 +87,45 @@ class ViewController: UIViewController, WKNavigationDelegate {
         print("************* TEST OK ******************")
         //GetPhotos().jsonString()
         print("************* TEST OK ******************")
-    
+        
+        
+        let url2 = URL(string: "https://api.vk.com/method/friends.get?order=name&count=3&v=5.81&fields=nickname&access_token=4556843c3882fc4e01cc93672fb583a35534f9c1d5071bfdc823ee12df3c16933154032f8cd01a9890219&user_id=630570554")!
+        
+        URLSession.shared.dataTask(with: url2) { data, response, error in
+            
+            guard let data = data,
+                  let json = try? JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.mutableContainers) else {
+                      return
+                  }
+            
+            
+            
+            let array = json as! [Any]
+            for userJson in array {
+                let userJson  = userJson as! [String: Any]
+                let id = userJson["id"] as! Int
+                let name = userJson["name"] as! String
+                let username = userJson["username"] as! String
+                let email = userJson["email"] as! String
+                let addressJson = userJson["address"] as! [String: Any]
+                let street = addressJson["street"] as! String
+                let suite = addressJson["suite"] as! String
+                let city = addressJson["city"] as! String
+                let zipcode = addressJson["zipcode"] as! String
+                let geoJson = addressJson["geo"] as! [String: Any]
+                let lat = geoJson["lat"] as! String
+                let lng = geoJson["lng"] as! String
+                let phone = userJson["phone"] as! String
+                let website = userJson["website"] as! String
+                let companyJson = userJson["company"] as! [String: Any]
+                let companyName = companyJson["name"] as! String
+                let catchPhrase = companyJson["catchPhrase"] as! String
+                let bs = companyJson["bs"] as! String
+                
+                print(id, name, username, email, street, suite, city, zipcode, lat, lng, phone, website, companyName, catchPhrase, bs)
+                
+            }
+          
+        }.resume()
     }
-
 }

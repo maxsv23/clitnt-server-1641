@@ -23,6 +23,7 @@
 		889C30ED272928C9008EC612 /* UrlBuilderRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889C30EC272928C9008EC612 /* UrlBuilderRequest.swift */; };
 		889C30EF272938A5008EC612 /* GetJson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889C30EE272938A5008EC612 /* GetJson.swift */; };
 		889C30F127294ABC008EC612 /* EnumHost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889C30F027294ABC008EC612 /* EnumHost.swift */; };
+		88CDDE7A272C0C2100D5AC8E /* Friends.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CDDE79272C0C2100D5AC8E /* Friends.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		889C30EC272928C9008EC612 /* UrlBuilderRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlBuilderRequest.swift; sourceTree = "<group>"; };
 		889C30EE272938A5008EC612 /* GetJson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetJson.swift; sourceTree = "<group>"; };
 		889C30F027294ABC008EC612 /* EnumHost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumHost.swift; sourceTree = "<group>"; };
+		88CDDE79272C0C2100D5AC8E /* Friends.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friends.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 		889C30E4272924A0008EC612 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				88CDDE78272C0C0400D5AC8E /* Models */,
 				889C30E92729270D008EC612 /* Extensions */,
 			);
 			path = Core;
@@ -159,6 +162,14 @@
 				889C30EA27292772008EC612 /* URLComponents+setQueryItems.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		88CDDE78272C0C0400D5AC8E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				88CDDE79272C0C2100D5AC8E /* Friends.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,6 +244,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				889C30ED272928C9008EC612 /* UrlBuilderRequest.swift in Sources */,
+				88CDDE7A272C0C2100D5AC8E /* Friends.swift in Sources */,
 				88126CC9272A7BA500E92244 /* AuthorizationToVKAPI.swift in Sources */,
 				88126CCD272A880800E92244 /* GetGroups.swift in Sources */,
 				888D29C927269E2E00A80BDA /* Session.swift in Sources */,

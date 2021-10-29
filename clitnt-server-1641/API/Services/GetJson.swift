@@ -8,47 +8,28 @@
 import Foundation
 
 class GetJson {
-
-   
-   // class func (сюда прилетает данные) {
-    // вызов функции для получения урл
-    // далее вызываем получение данных
-    //  далее парсим данные
-    //  возвращаем
-    //
-    //
-    //
-//
-//}
     
-    
-    
-    
-    
-    
-    class func getRequest(url: URL, completion: @escaping (String?, Error?) -> Void) {
-
-        let config = URLSessionConfiguration.default
-        let session = URLSession(configuration: config)
-        var request = URLRequest(url: url)
-        request.httpMethod = "GET"
-
-        let task = session.dataTask(with: request){
-            (data, response, error) in
+    class func fetch(url: URL,completion: @escaping (Any) -> ()){
+        
+        
+        
+        
+        
+        let task = URLSession.shared.dataTask(with: url){ (data, response , error) in
             if let error = error {
-                completion(nil, error)
+                print(error)
                 return
             }
-
             guard let data = data else {return}
+            
+            guard  let json = try? JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.mutableContainers) else {return}
 
-            let jsonString = String(data: data, encoding: .utf8)
-///загоняем в МАЙН поток чтобы данные обработались корректно
-            DispatchQueue.main.async {
-                completion(jsonString, error)
-            }
+            completion(json)
+            
+            
+            
         }
         task.resume()
-
     }
+    
 }

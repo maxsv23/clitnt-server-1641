@@ -24,7 +24,7 @@ class UrlBuilderRequest {
         
         let userID = Session.shared.userID
         let token = Session.shared.token
-        
+       
         
         var components = URLComponents()
         
@@ -38,7 +38,12 @@ class UrlBuilderRequest {
         components.queryItems?.append(URLQueryItem(name: "access_token", value: token))
         components.queryItems?.append(URLQueryItem(name: "user_id", value: userID))
 
+        
+        
+        
+        
         return components.url
+     
         
     }
     

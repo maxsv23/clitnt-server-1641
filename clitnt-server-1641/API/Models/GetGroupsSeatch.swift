@@ -33,14 +33,13 @@ class GetGroupsSeatch {
     }
     
     func jsonString () {
-        guard let urlAbsolute = UrlBuilderRequest.urlBuilderRequest(host: host, path: path, params: params) else { return }
+        guard let url = UrlBuilderRequest.urlBuilderRequest(host: host, path: path, params: params) else { return }
         
-        GetJson.getRequest(url: urlAbsolute){ (json, error) in
-            
-//            guard let json = json else {return}
-//            guard let error = error else {return}
-            print(json)
-            print(error)
+        GetJson.fetch(url: url) { (json) in
+            DispatchQueue.main.async {
+                //теперь делается в потоке main
+                print(json)
+            }
         }
     }
      
