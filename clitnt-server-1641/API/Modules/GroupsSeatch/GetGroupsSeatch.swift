@@ -1,5 +1,5 @@
 //
-//  GetGroups.swift
+//  GetGroupsSeatch.swift
 //  clitnt-server-1641
 //
 //  Created by maxim on 28.10.2021.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-class GetGroups {
+class GetGroupsSeatch {
     
     let host:String
     let path:String
@@ -16,11 +16,11 @@ class GetGroups {
     init(){
         // enum rawValue получаем значение по enum
         self.host = EnumHost.BaseURL.api.rawValue
-        self.path = EnumHost.Urlmodule.groups.rawValue
-       
+        self.path = EnumHost.Urlmodule.groupsSearch.rawValue
         self.params = [
+            "q": "Music",
             "count" : "3",
-            "extended": "1",
+            "offset": "3",
             "v" : "5.81"
         ]
     }
@@ -35,13 +35,12 @@ class GetGroups {
     func jsonString () {
         guard let url = UrlBuilderRequest.urlBuilderRequest(host: host, path: path, params: params) else { return }
         
-        GetJson.fetch(url: url) { (json) in
+        JsonDecoding.fetch(moduleDecod: ModelFriends.self, url: url) { (json) in
             DispatchQueue.main.async {
                 //теперь делается в потоке main
                 print(json)
             }
         }
     }
-     
 }
 

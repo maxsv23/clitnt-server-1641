@@ -6,16 +6,14 @@
 //
 
 import Foundation
-
-
+import UIKit
 
 class AuthorizationToVKAPI {
-    
-    
+
     let host:String
     let path:String
     let params: [String: String]
-    
+
     init(){
         // enum rawValue получаем значение по enum
         self.host = EnumHost.BaseURL.auth.rawValue
@@ -29,19 +27,14 @@ class AuthorizationToVKAPI {
             "v" : "5.81"
         ]
     }
-    
-    
-    
-    
-    
-//    func authorizeToVKAPI() {
-//
-//        var urlComponents = URLComponents()
-//
-//        let request = URLRequest(url: urlComponents.url!)
-//
-//
-//
-//      //  webview.load(request)
-//    }
+
+  func getModel () {
+
+//        guard let url = UrlBuilderRequest.urlBuilderRequest(host: host, path: path, params: params) else { return }
+
+        //let request = URLRequest(url: url)
+        
+       // webview.load(request)
+    }
+
 }

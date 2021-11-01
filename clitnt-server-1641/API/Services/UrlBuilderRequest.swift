@@ -12,39 +12,33 @@
 import Foundation
 
 class UrlBuilderRequest {
-    
+
     /// [String:String] = [:] для избежания пустого  arrey можно  применить а можно и не можно
     /// static class и так и так доступно из вне
     /// ради практики будем использовать замыкания для обращения к функции
     ///  можно делегат но это потом
-    
-    
-    
+
     class func urlBuilderRequest(host:String, path:String, params : [String:String]) -> URL? {
-        
+
         let userID = Session.shared.userID
         let token = Session.shared.token
-       
-        
+
         var components = URLComponents()
-        
+
         components.scheme = "https"
         components.host = host
         components.path = path
-             
+
         components.setQueryItems(with: params )
-        
+
         //добавим токен и id
         components.queryItems?.append(URLQueryItem(name: "access_token", value: token))
         components.queryItems?.append(URLQueryItem(name: "user_id", value: userID))
 
-        
-        
-        
-        
-        return components.url
-     
-        
+        let url = components.url?.absoluteURL
+
+        return url
+
     }
-    
+
 }
