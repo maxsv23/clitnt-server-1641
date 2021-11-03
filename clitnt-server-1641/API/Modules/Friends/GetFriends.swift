@@ -39,14 +39,15 @@ class GetFriends {
     func getModel () {
 
         var modelResult:ModelFriends?
-        
+  
+        //формируем корректный со всеми параметрами запрос на сервер
         guard let url = UrlBuilderRequest.urlBuilderRequest(host: host, path: path, params: params) else { return }
 
+        /// через замыкание отправляем тип структуры-модели данных URL  нам приходит модель
+        /// сделано для практики применения замыкания и работы с различными типами данных
         JsonDecoding.fetch(moduleDecod: ModelFriends.self, url: url) { data in
-
             modelResult = data as? ModelFriends
-
-            print(modelResult?.response.items as Any)
+           // print(modelResult?.response.items as Any)
         }
 
     }

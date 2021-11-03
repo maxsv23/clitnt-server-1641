@@ -1,3 +1,5 @@
+
+
 //фишки xcode
 //Быстрое перемещение по файлу CTRL + 6
 // удаление пустых строк регулярное выражение (   ^\s+$   )
@@ -11,13 +13,14 @@
 /// три слеша это дескрипшен будет  в строке ниже будет описание параметров
 
 import Foundation
+import RealmSwift
+
 
 class JsonDecoding {
 	
 	class func fetch<T:Codable>(moduleDecod: T.Type, url: URL,completion: @escaping (Codable) -> ()){
 		
-		print(url)
-		
+	
 		
 		let task = URLSession.shared.dataTask(with: url){ (data, response , error) in
 			if let error = error {
@@ -27,8 +30,40 @@ class JsonDecoding {
 			
 			do{
 				
+				let jsonSerialization = try JSONSerialization.jsonObject(with: data!, options: .mutableContainers)
+				
+				//let asd = jsonSerialization["response"] as? [[String:AnyObject]]
+				
+				
+				
 				let jsonDecode = JSONDecoder()
+
 				let result = try jsonDecode.decode(moduleDecod, from: data!)
+				
+		
+				func insertOrUpdate(model: ModelFriends) {
+					let realm = try! Realm()
+					try! realm.write({
+						let newsRealm = RealmSwiftFriends()
+						newsRealm.id = 5
+						newsRealm.photo50 = "fff"
+
+						realm.add(newsRealm)
+						
+						})
+					try! realm.commitWrite()
+					print(realm.configuration.fileURL ?? "")
+				}
+
+				
+				insertOrUpdate(model: result as! ModelFriends)
+				
+				
+				
+				
+				
+				
+				
 				
 				completion(result as Codable)
 				
