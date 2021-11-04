@@ -46,7 +46,7 @@
 		88488DF5271FD87000D07012 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		88488DF7271FD87000D07012 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		885E7387272FAA4F009A285E /* ModelFriends.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelFriends.swift; sourceTree = "<group>"; };
-		885E739027301D7E009A285E /* RealmSwiftFriends.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmSwiftFriends.swift; sourceTree = "<group>"; };
+		885E739027301D7E009A285E /* RealmSwiftFriends.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmSwiftFriends.swift; sourceTree = "<group>"; };
 		888D29C827269E2E00A80BDA /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		888D29CA2726B77E00A80BDA /* GetFriends.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetFriends.swift; sourceTree = "<group>"; };
 		889C30EA27292772008EC612 /* URLComponents+setQueryItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLComponents+setQueryItems.swift"; sourceTree = "<group>"; };
