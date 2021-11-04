@@ -17,6 +17,7 @@ import RealmSwift
 class JsonDecoding {
 
 	class func fetch<T:Codable>(moduleDecod: T.Type, url: URL,completion: @escaping (Codable) -> ()){
+
 		print(url)
 
 		let task = URLSession.shared.dataTask(with: url){ (data, response , error) in
@@ -24,29 +25,80 @@ class JsonDecoding {
 				print(error)
 				return
 			}
-			
-			
-			do {
-				let user = try JSONDecoder().decode(RealmSwiftFriends.self, from: data!)
-				let migration = Realm.Configuration(schemaVersion: 5)
-				let realm = try Realm(configuration: migration)
-				realm.beginWrite()
-				realm.add(user)
-				print(realm.configuration.fileURL ?? "")
-				try realm.commitWrite()
-				
-				
-			}catch{
-				print("Err realm")
-			}
-			
-			
+
+//			//let jsonArrey = data?.prettyJSON as Any
+//
+//				func saveRealmData(_ realmFriends: RealmSwiftFriends) {
+//
+//						let realm = try! Realm()
+//						print(realm.configuration.fileURL ?? "")
+//					let asd = RealmSwiftFriends()
+//						realm.beginWrite()
+//
+//
+//					asd.id = realmFriends.id
+//					asd.photo50 = realmFriends.photo50
+//
+//					realm.add(asd)
+//
+//						try! realm.commitWrite()
+//
+//				}
+//
+//
+//
+//
+//			do {
+//				let jsonRealm = try! JSONDecoder().decode(RealmSwiftFriends.self, from: data!)
+//			//	let jsonRealm = try JSONDecoder().decode(RealmSwiftFriends.self, from: data!)
+//
+//				saveRealmData(jsonRealm)
+//			}catch{
+//				print("error realm")
+//			}
+
+//			do {
+//				let user = try JSONDecoder().decode(RealmSwiftFriends.self, from: data!)
+//				let migration = Realm.Configuration(schemaVersion: 5)
+//				let realm = try Realm(configuration: migration)
+//				realm.beginWrite()
+//				realm.add(user)
+//				print(realm.configuration.fileURL ?? "")
+//				try realm.commitWrite()
+//
+//
+//			}catch{
+//				print("Err realm")
+//			}
+
 
 			do{
+
+				let jsonSerialization = try JSONSerialization.jsonObject(with: data!, options: .mutableContainers)
+
+				//let asd = jsonSerialization["response"] as? [[String:AnyObject]]
+
 
 				let jsonDecode = JSONDecoder()
 
 				let result = try jsonDecode.decode(moduleDecod, from: data!)
+
+
+				//				func insertOrUpdate(model: ModelFriends) {
+				//					let realm = try! Realm()
+				//					try! realm.write({
+				//						let newsRealm = RealmSwiftFriends()
+				//						newsRealm.id = 5
+				//						newsRealm.photo50 = "fff"
+				//
+				//						realm.add(newsRealm)
+				//
+				//						})
+				//					try! realm.commitWrite()
+				//					print(realm.configuration.fileURL ?? "")
+				//				}
+
+				//			insertOrUpdate(model: result as! ModelFriends)
 
 				completion(result as Codable)
 
