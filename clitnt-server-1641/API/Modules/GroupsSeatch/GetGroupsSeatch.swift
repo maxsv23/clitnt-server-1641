@@ -32,15 +32,15 @@ class GetGroupsSeatch {
         return urlAbsolute
     }
     
-    func jsonString () {
-        guard let url = UrlBuilderRequest.urlBuilderRequest(host: host, path: path, params: params) else { return }
-        
-        JsonDecoding.fetch(moduleDecod: ModelFriends.self, url: url) { (json) in
-            DispatchQueue.main.async {
-                //теперь делается в потоке main
-                print(json)
-            }
-        }
-    }
+//    func jsonString () {
+//        guard let url = UrlBuilderRequest.urlBuilderRequest(host: host, path: path, params: params) else { return }
+//        
+//        JsonDecoding.fetch(moduleDecod: ModelFriends.self, url: url) { (json) in
+//            DispatchQueue.main.async {
+//                //теперь делается в потоке main
+//                print(json)
+//            }
+//        }
+//    }
 }
 

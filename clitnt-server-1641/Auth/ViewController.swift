@@ -21,7 +21,7 @@ class ViewController: UIViewController, WKNavigationDelegate {
         super.viewDidLoad()
 
         authorizeToVKAPI()
-
+        //FriendsTest().zxc()
     }
 
     func authorizeToVKAPI() {
@@ -67,7 +67,8 @@ class ViewController: UIViewController, WKNavigationDelegate {
         decisionHandler(.cancel)
 
      //   print("************* TEST OK ******************")
-          GetFriends().getModel()
+       //   GetFriends().setDataFromSiteToRealmswiftDB()
+            GetFriends().getDataFromRealmDB()
     //    print("************* TEST OK ******************")
         //GetGroups().jsonString()
     //    print("************* TEST OK ******************")
