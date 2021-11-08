@@ -12,7 +12,6 @@
 		050EC47B27382D0100C3AF00 /* FriendsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050EC47A27382D0100C3AF00 /* FriendsItem.swift */; };
 		05355CB427345FED004D7E4F /* FriendsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05355CB327345FED004D7E4F /* FriendsTest.swift */; };
 		1EFD315463ECD7C4F351EA06 /* Pods_clitnt_server_1641.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96A41CD96B3D8DF25C9CA8E5 /* Pods_clitnt_server_1641.framework */; };
-		88126CC9272A7BA500E92244 /* AuthorizationToVKAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88126CC8272A7BA500E92244 /* AuthorizationToVKAPI.swift */; };
 		88126CCB272A87D400E92244 /* GetPhotos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88126CCA272A87D400E92244 /* GetPhotos.swift */; };
 		88126CCD272A880800E92244 /* GetGroups.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88126CCC272A880800E92244 /* GetGroups.swift */; };
 		88126CCF272A885100E92244 /* GetGroupsSeatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88126CCE272A885100E92244 /* GetGroupsSeatch.swift */; };
@@ -29,6 +28,7 @@
 		889C30ED272928C9008EC612 /* UrlBuilderRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889C30EC272928C9008EC612 /* UrlBuilderRequest.swift */; };
 		889C30EF272938A5008EC612 /* JsonDecodingToRealmDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889C30EE272938A5008EC612 /* JsonDecodingToRealmDB.swift */; };
 		889C30F127294ABC008EC612 /* EnumHost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889C30F027294ABC008EC612 /* EnumHost.swift */; };
+		889CCFC62738EEA1006CD488 /* AuthorizeVK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889CCFC52738EEA1006CD488 /* AuthorizeVK.swift */; };
 		88F2A57A273285AA00D139D6 /* JsonToJsonSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F2A579273285AA00D139D6 /* JsonToJsonSerialization.swift */; };
 /* End PBXBuildFile section */
 
@@ -39,7 +39,6 @@
 		05355CB327345FED004D7E4F /* FriendsTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsTest.swift; sourceTree = "<group>"; };
 		389721D264BE1E5654000090 /* Pods-clitnt-server-1641.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-clitnt-server-1641.debug.xcconfig"; path = "Target Support Files/Pods-clitnt-server-1641/Pods-clitnt-server-1641.debug.xcconfig"; sourceTree = "<group>"; };
 		38FED4E197B99B9BEBD47D9D /* Pods-clitnt-server-1641.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-clitnt-server-1641.release.xcconfig"; path = "Target Support Files/Pods-clitnt-server-1641/Pods-clitnt-server-1641.release.xcconfig"; sourceTree = "<group>"; };
-		88126CC8272A7BA500E92244 /* AuthorizationToVKAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationToVKAPI.swift; sourceTree = "<group>"; };
 		88126CCA272A87D400E92244 /* GetPhotos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPhotos.swift; sourceTree = "<group>"; };
 		88126CCC272A880800E92244 /* GetGroups.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetGroups.swift; sourceTree = "<group>"; };
 		88126CCE272A885100E92244 /* GetGroupsSeatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetGroupsSeatch.swift; sourceTree = "<group>"; };
@@ -58,6 +57,7 @@
 		889C30EC272928C9008EC612 /* UrlBuilderRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlBuilderRequest.swift; sourceTree = "<group>"; };
 		889C30EE272938A5008EC612 /* JsonDecodingToRealmDB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = JsonDecodingToRealmDB.swift; sourceTree = "<group>"; usesTabs = 1; };
 		889C30F027294ABC008EC612 /* EnumHost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumHost.swift; sourceTree = "<group>"; };
+		889CCFC52738EEA1006CD488 /* AuthorizeVK.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizeVK.swift; sourceTree = "<group>"; };
 		88F2A579273285AA00D139D6 /* JsonToJsonSerialization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonToJsonSerialization.swift; sourceTree = "<group>"; };
 		96A41CD96B3D8DF25C9CA8E5 /* Pods_clitnt_server_1641.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_clitnt_server_1641.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -253,7 +253,7 @@
 				889C30EC272928C9008EC612 /* UrlBuilderRequest.swift */,
 				889C30EE272938A5008EC612 /* JsonDecodingToRealmDB.swift */,
 				889C30F027294ABC008EC612 /* EnumHost.swift */,
-				88126CC8272A7BA500E92244 /* AuthorizationToVKAPI.swift */,
+				889CCFC52738EEA1006CD488 /* AuthorizeVK.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -385,7 +385,6 @@
 				88F2A57A273285AA00D139D6 /* JsonToJsonSerialization.swift in Sources */,
 				889C30ED272928C9008EC612 /* UrlBuilderRequest.swift in Sources */,
 				050EC47B27382D0100C3AF00 /* FriendsItem.swift in Sources */,
-				88126CC9272A7BA500E92244 /* AuthorizationToVKAPI.swift in Sources */,
 				88126CCD272A880800E92244 /* GetGroups.swift in Sources */,
 				888D29C927269E2E00A80BDA /* Session.swift in Sources */,
 				888D29CB2726B77E00A80BDA /* GetFriends.swift in Sources */,
@@ -398,6 +397,7 @@
 				05355CB427345FED004D7E4F /* FriendsTest.swift in Sources */,
 				88126CCF272A885100E92244 /* GetGroupsSeatch.swift in Sources */,
 				88488DEC271FD86E00D07012 /* SceneDelegate.swift in Sources */,
+				889CCFC62738EEA1006CD488 /* AuthorizeVK.swift in Sources */,
 				885E7388272FAA4F009A285E /* ModelFriends.swift in Sources */,
 				88126CCB272A87D400E92244 /* GetPhotos.swift in Sources */,
 				050EC47827382BF200C3AF00 /* FriendsResponse.swift in Sources */,

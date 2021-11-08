@@ -13,6 +13,24 @@
 ///  DispatchQueue.main.async {
 ///теперь делается в потоке main
 ///    }
+//  /// MARK: - IBOUtlets
+
+//  // MARK: - Public Properties
+
+//  // MARK: - Private Properties
+
+//  // MARK: - Lifecycle
+
+//   // MARK: - Public Methods
+
+//  // MARK: - Private Methods
+
+//   // MARK: - IBActions
+///
+///
+///
+///
+///
 
 import Foundation
 import RealmSwift
@@ -60,7 +78,7 @@ class GetFriends {
             let tested = realm.objects(FriendsItem.self)
             
             //print(tested)
-            // tested.forEach{print($0.firstName, $0.id)}
+             tested.forEach{print($0.firstName, $0.id)}
         }catch {
             print("щшибка")
             print(error)

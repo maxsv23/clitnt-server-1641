@@ -8,23 +8,36 @@
 import UIKit
 import WebKit
 
-class ViewController: UIViewController, WKNavigationDelegate {
-
+class ViewController: UIViewController, WKNavigationDelegate, AuthorizeVKDelegateProtocol {
+//class ViewController: UIViewController, AuthorizeVKDelegateProtocol {
+    //делегуруем через протокол для того чтобы вынести логику в другой класс
+    private let authorizeVKDelegateItem = AuthorizeVK()
+    
+   
+    
     @IBOutlet weak var webview: WKWebView! {
         didSet {
 
             webview.navigationDelegate = self
         }
     }
-
+ 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        //устанавливаю зависимость-связь с экземпляром класса AuthorizeVK()  его методами-свофствами
+      
+     //   authorizeVKDelegateItem.setСonnectionDelegate(delegateProtocol: self)
+        
+     //   webview.load(authorizeVKDelegateItem.authorizeToVKAPI())
         authorizeToVKAPI()
-        //FriendsTest().zxc()
+        
+        print(Session.shared.token)
+        print(Session.shared.userID)
+        
     }
 
-    func authorizeToVKAPI() {
+    func authorizeToVKAPI(){
 
         var urlComponents = URLComponents()
         urlComponents.scheme = "https"
@@ -38,11 +51,16 @@ class ViewController: UIViewController, WKNavigationDelegate {
             URLQueryItem(name: "response_type", value: "token"),
             URLQueryItem(name: "v", value: "5.68")
         ]
+        //return URLRequest(url: urlComponents.url!)
+        
         let request = URLRequest(url: urlComponents.url!)
-
+        //delegateAuthorizeVK.webview.load(request)
+       
         webview.load(request)
     }
-
+    
+    
+    
     func webView(_ webView: WKWebView, decidePolicyFor navigationResponse: WKNavigationResponse, decisionHandler: @escaping (WKNavigationResponsePolicy) -> Void) {
 
         guard let url = navigationResponse.response.url, url.path == "/blank.html", let fragment = url.fragment  else {
@@ -66,16 +84,8 @@ class ViewController: UIViewController, WKNavigationDelegate {
         Session.shared.userID = userID
         decisionHandler(.cancel)
 
-     //   print("************* TEST OK ******************")
-       //   GetFriends().setDataFromSiteToRealmswiftDB()
-            GetFriends().getDataFromRealmDB()
-    //    print("************* TEST OK ******************")
-        //GetGroups().jsonString()
-    //    print("************* TEST OK ******************")
-        //GetGroupsSeatch().jsonString()
-     //   print("************* TEST OK ******************")
-        //GetPhotos().jsonString()
-     //   print("************* TEST OK ******************")
 
     }
+    
+    
 }
