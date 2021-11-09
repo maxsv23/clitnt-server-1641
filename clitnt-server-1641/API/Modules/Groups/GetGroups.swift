@@ -25,23 +25,36 @@ class GetGroups {
         ]
     }
     
-    func getUrlForFriendsAPI() -> URL? {
+    func setDataFromSiteToRealmswiftDB (){
+
+        //формируем корректный со всеми параметрами запрос на сервер
+        guard let url = UrlBuilderRequest.urlBuilderRequest(host: host, path: path, params: params) else { return }
         
-        let urlAbsolute = UrlBuilderRequest.urlBuilderRequest(host: host, path: path, params: params)
-        
-        return urlAbsolute
+        print(url)
+        // обработка запроса с занесение в базу данных
+     //   JsonDecodingToRealmDB.fetch(moduleDecod: FriendsRealmSwiftModel.self, url: url)
+
     }
-    
-//    func jsonString () {
-//        guard let url = UrlBuilderRequest.urlBuilderRequest(host: host, path: path, params: params) else { return }
-//        
-//        JsonDecoding.fetch(moduleDecod: ModelFriends.self, url: url) { (json) in
-//            DispatchQueue.main.async {
-//                //теперь делается в потоке main
-//                print(json)
-//            }
+
+    func getDataFromRealmDB () {
+
+//        do{
+//            // let response = try JSONDecoder().decode(FriendsRealmSwiftModel.self, from: data!)
+//
+//            // хорошо что посмотрел урок следи за версией базы!!!
+//            let verRealm = Realm.Configuration(schemaVersion:25)
+//            let realm = try Realm(configuration: verRealm)
+//
+//            //тут массив Френдсов
+//            let tested = realm.objects(FriendsItem.self)
+//
+//            //print(tested)
+//             tested.forEach{print($0.firstName, $0.id)}
+//        }catch {
+//            print("щшибка")
+//            print(error)
 //        }
-//    }
+    }
      
 }
 

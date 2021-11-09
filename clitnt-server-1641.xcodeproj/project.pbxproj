@@ -10,6 +10,18 @@
 		050EC47627382B8300C3AF00 /* FriendsRealmSwiftModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050EC47527382B8300C3AF00 /* FriendsRealmSwiftModel.swift */; };
 		050EC47827382BF200C3AF00 /* FriendsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050EC47727382BF200C3AF00 /* FriendsResponse.swift */; };
 		050EC47B27382D0100C3AF00 /* FriendsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050EC47A27382D0100C3AF00 /* FriendsItem.swift */; };
+		0582CD05273B0FE000695B77 /* PhotosLike.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0582CCFF273B0FE000695B77 /* PhotosLike.swift */; };
+		0582CD06273B0FE000695B77 /* PhotosRealmSwiftModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0582CD00273B0FE000695B77 /* PhotosRealmSwiftModel.swift */; };
+		0582CD07273B0FE000695B77 /* PhotosItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0582CD01273B0FE000695B77 /* PhotosItem.swift */; };
+		0582CD08273B0FE000695B77 /* PhotosRepost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0582CD02273B0FE000695B77 /* PhotosRepost.swift */; };
+		0582CD09273B0FE000695B77 /* PhotosResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0582CD03273B0FE000695B77 /* PhotosResponse.swift */; };
+		0582CD0A273B0FE000695B77 /* PhotosSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0582CD04273B0FE000695B77 /* PhotosSize.swift */; };
+		0582CD14273B118000695B77 /* GroupRealmSwiftModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0582CD11273B118000695B77 /* GroupRealmSwiftModel.swift */; };
+		0582CD15273B118000695B77 /* GroupItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0582CD12273B118000695B77 /* GroupItem.swift */; };
+		0582CD16273B118000695B77 /* GroupResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0582CD13273B118000695B77 /* GroupResponse.swift */; };
+		0582CD20273B137E00695B77 /* GroupSeartchItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0582CD1D273B137E00695B77 /* GroupSeartchItem.swift */; };
+		0582CD21273B137E00695B77 /* GroupSeartchRealmSwiftModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0582CD1E273B137E00695B77 /* GroupSeartchRealmSwiftModel.swift */; };
+		0582CD22273B137E00695B77 /* GroupSeartchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0582CD1F273B137E00695B77 /* GroupSeartchResponse.swift */; };
 		1EFD315463ECD7C4F351EA06 /* Pods_clitnt_server_1641.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96A41CD96B3D8DF25C9CA8E5 /* Pods_clitnt_server_1641.framework */; };
 		88126CCB272A87D400E92244 /* GetPhotos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88126CCA272A87D400E92244 /* GetPhotos.swift */; };
 		88126CCD272A880800E92244 /* GetGroups.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88126CCC272A880800E92244 /* GetGroups.swift */; };
@@ -36,6 +48,18 @@
 		050EC47527382B8300C3AF00 /* FriendsRealmSwiftModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsRealmSwiftModel.swift; sourceTree = "<group>"; };
 		050EC47727382BF200C3AF00 /* FriendsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsResponse.swift; sourceTree = "<group>"; };
 		050EC47A27382D0100C3AF00 /* FriendsItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsItem.swift; sourceTree = "<group>"; };
+		0582CCFF273B0FE000695B77 /* PhotosLike.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotosLike.swift; sourceTree = "<group>"; };
+		0582CD00273B0FE000695B77 /* PhotosRealmSwiftModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotosRealmSwiftModel.swift; sourceTree = "<group>"; };
+		0582CD01273B0FE000695B77 /* PhotosItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotosItem.swift; sourceTree = "<group>"; };
+		0582CD02273B0FE000695B77 /* PhotosRepost.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotosRepost.swift; sourceTree = "<group>"; };
+		0582CD03273B0FE000695B77 /* PhotosResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotosResponse.swift; sourceTree = "<group>"; };
+		0582CD04273B0FE000695B77 /* PhotosSize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotosSize.swift; sourceTree = "<group>"; };
+		0582CD11273B118000695B77 /* GroupRealmSwiftModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupRealmSwiftModel.swift; sourceTree = "<group>"; };
+		0582CD12273B118000695B77 /* GroupItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupItem.swift; sourceTree = "<group>"; };
+		0582CD13273B118000695B77 /* GroupResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupResponse.swift; sourceTree = "<group>"; };
+		0582CD1D273B137E00695B77 /* GroupSeartchItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupSeartchItem.swift; sourceTree = "<group>"; };
+		0582CD1E273B137E00695B77 /* GroupSeartchRealmSwiftModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupSeartchRealmSwiftModel.swift; sourceTree = "<group>"; };
+		0582CD1F273B137E00695B77 /* GroupSeartchResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupSeartchResponse.swift; sourceTree = "<group>"; };
 		389721D264BE1E5654000090 /* Pods-clitnt-server-1641.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-clitnt-server-1641.debug.xcconfig"; path = "Target Support Files/Pods-clitnt-server-1641/Pods-clitnt-server-1641.debug.xcconfig"; sourceTree = "<group>"; };
 		38FED4E197B99B9BEBD47D9D /* Pods-clitnt-server-1641.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-clitnt-server-1641.release.xcconfig"; path = "Target Support Files/Pods-clitnt-server-1641/Pods-clitnt-server-1641.release.xcconfig"; sourceTree = "<group>"; };
 		88126CCA272A87D400E92244 /* GetPhotos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPhotos.swift; sourceTree = "<group>"; };
@@ -84,12 +108,69 @@
 			path = RealmModel;
 			sourceTree = "<group>";
 		};
-		056D136D27384347009E06BF /* StructModel */ = {
+		056D136D27384347009E06BF /* StructModel-test */ = {
 			isa = PBXGroup;
 			children = (
 				885E7387272FAA4F009A285E /* ModelFriends.swift */,
 			);
-			path = StructModel;
+			path = "StructModel-test";
+			sourceTree = "<group>";
+		};
+		0582CCC7273B01A000695B77 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0582CCC9273B01CC00695B77 /* RealmModel */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		0582CCC9273B01CC00695B77 /* RealmModel */ = {
+			isa = PBXGroup;
+			children = (
+				0582CD00273B0FE000695B77 /* PhotosRealmSwiftModel.swift */,
+				0582CD03273B0FE000695B77 /* PhotosResponse.swift */,
+				0582CD01273B0FE000695B77 /* PhotosItem.swift */,
+				0582CCFF273B0FE000695B77 /* PhotosLike.swift */,
+				0582CD02273B0FE000695B77 /* PhotosRepost.swift */,
+				0582CD04273B0FE000695B77 /* PhotosSize.swift */,
+			);
+			path = RealmModel;
+			sourceTree = "<group>";
+		};
+		0582CCD0273B025000695B77 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0582CCD1273B025800695B77 /* RealmModel */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		0582CCD1273B025800695B77 /* RealmModel */ = {
+			isa = PBXGroup;
+			children = (
+				0582CD11273B118000695B77 /* GroupRealmSwiftModel.swift */,
+				0582CD13273B118000695B77 /* GroupResponse.swift */,
+				0582CD12273B118000695B77 /* GroupItem.swift */,
+			);
+			path = RealmModel;
+			sourceTree = "<group>";
+		};
+		0582CCD9273B02BE00695B77 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0582CCDA273B02CC00695B77 /* RealmModel */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		0582CCDA273B02CC00695B77 /* RealmModel */ = {
+			isa = PBXGroup;
+			children = (
+				0582CD1E273B137E00695B77 /* GroupSeartchRealmSwiftModel.swift */,
+				0582CD1F273B137E00695B77 /* GroupSeartchResponse.swift */,
+				0582CD1D273B137E00695B77 /* GroupSeartchItem.swift */,
+			);
+			path = RealmModel;
 			sourceTree = "<group>";
 		};
 		419011237E54541625684498 /* Frameworks */ = {
@@ -142,7 +223,7 @@
 		885E738B273014BF009A285E /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				056D136D27384347009E06BF /* StructModel */,
+				056D136D27384347009E06BF /* StructModel-test */,
 				050EC474273829E900C3AF00 /* RealmModel */,
 			);
 			path = Models;
@@ -161,6 +242,7 @@
 			isa = PBXGroup;
 			children = (
 				88126CCA272A87D400E92244 /* GetPhotos.swift */,
+				0582CCC7273B01A000695B77 /* Models */,
 			);
 			path = Photos;
 			sourceTree = "<group>";
@@ -169,6 +251,7 @@
 			isa = PBXGroup;
 			children = (
 				88126CCC272A880800E92244 /* GetGroups.swift */,
+				0582CCD0273B025000695B77 /* Models */,
 			);
 			path = Groups;
 			sourceTree = "<group>";
@@ -177,6 +260,7 @@
 			isa = PBXGroup;
 			children = (
 				88126CCE272A885100E92244 /* GetGroupsSeatch.swift */,
+				0582CCD9273B02BE00695B77 /* Models */,
 			);
 			path = GroupsSeatch;
 			sourceTree = "<group>";
@@ -374,6 +458,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0582CD16273B118000695B77 /* GroupResponse.swift in Sources */,
 				88F2A57A273285AA00D139D6 /* JsonToJsonSerialization.swift in Sources */,
 				889C30ED272928C9008EC612 /* UrlBuilderRequest.swift in Sources */,
 				050EC47B27382D0100C3AF00 /* FriendsItem.swift in Sources */,
@@ -382,17 +467,28 @@
 				888D29CB2726B77E00A80BDA /* GetFriends.swift in Sources */,
 				889C30EB27292772008EC612 /* URLComponents+setQueryItems.swift in Sources */,
 				889C30EF272938A5008EC612 /* JsonDecodingToRealmDB.swift in Sources */,
+				0582CD15273B118000695B77 /* GroupItem.swift in Sources */,
+				0582CD07273B0FE000695B77 /* PhotosItem.swift in Sources */,
 				889C30F127294ABC008EC612 /* EnumHost.swift in Sources */,
+				0582CD21273B137E00695B77 /* GroupSeartchRealmSwiftModel.swift in Sources */,
+				0582CD20273B137E00695B77 /* GroupSeartchItem.swift in Sources */,
 				88488DEE271FD86E00D07012 /* ViewController.swift in Sources */,
 				88488DEA271FD86E00D07012 /* AppDelegate.swift in Sources */,
 				050EC47627382B8300C3AF00 /* FriendsRealmSwiftModel.swift in Sources */,
+				0582CD22273B137E00695B77 /* GroupSeartchResponse.swift in Sources */,
+				0582CD0A273B0FE000695B77 /* PhotosSize.swift in Sources */,
 				88126CCF272A885100E92244 /* GetGroupsSeatch.swift in Sources */,
 				88488DEC271FD86E00D07012 /* SceneDelegate.swift in Sources */,
 				889CCFC62738EEA1006CD488 /* AuthorizeVK.swift in Sources */,
 				885E7388272FAA4F009A285E /* ModelFriends.swift in Sources */,
+				0582CD06273B0FE000695B77 /* PhotosRealmSwiftModel.swift in Sources */,
 				88126CCB272A87D400E92244 /* GetPhotos.swift in Sources */,
+				0582CD09273B0FE000695B77 /* PhotosResponse.swift in Sources */,
+				0582CD05273B0FE000695B77 /* PhotosLike.swift in Sources */,
+				0582CD08273B0FE000695B77 /* PhotosRepost.swift in Sources */,
 				8888B1C6273A8C8400609600 /* WKNavigationDelegate.swift in Sources */,
 				050EC47827382BF200C3AF00 /* FriendsResponse.swift in Sources */,
+				0582CD14273B118000695B77 /* GroupRealmSwiftModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

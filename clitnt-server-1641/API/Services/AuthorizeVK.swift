@@ -21,10 +21,7 @@ class AuthorizeVK {
     var params: [String: String]
 
     init(){
-        
-        print("init")
-        print(Session.shared.userID)
-        
+  
         // enum rawValue получаем значение по enum
         self.path = EnumHost.Urlmodule.auth.rawValue
         self.host = EnumHost.BaseURL.auth.rawValue
@@ -42,10 +39,9 @@ class AuthorizeVK {
         //формируем корректный со всеми параметрами запрос на сервер
  
     func authorizeToVKAPI(){
-        print("authorizeToVKAPI")
-        print(Session.shared.userID)
+       
         guard let url = UrlBuilderRequest.urlBuilderRequest(host: host, path: path, params: params) else { return }
-
+        
         let result = URLRequest(url: url)
         
         delegateAuthorizeVK?.webview.load(result)

@@ -14,7 +14,7 @@ class ViewController: UIViewController, AuthorizeVKDelegateProtocol {
     
     ///делегуруем через протокол для того чтобы вынести логику в другой класс
     ///создадим класс авторизация но не будем его сразу запускать инициализацию /?/
-   
+    let authorizeVKDelegateItem = AuthorizeVK()
     
    
     
@@ -29,7 +29,7 @@ class ViewController: UIViewController, AuthorizeVKDelegateProtocol {
     override func viewDidLoad() {
         super.viewDidLoad()
         //устанавливаю зависимость-связь с экземпляром класса AuthorizeVK()  его методами-свофствами
-        let authorizeVKDelegateItem = AuthorizeVK()
+       //
         authorizeVKDelegateItem.setСonnectionDelegate(delegateProtocol: self)
         
         
