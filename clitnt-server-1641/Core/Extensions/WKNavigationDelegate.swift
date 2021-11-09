@@ -36,6 +36,7 @@ extension ViewController: WKNavigationDelegate {
         print(Session.shared.userID)
         print(Session.shared.token)
         
+        
         GetFriends().setDataFromSiteToRealmswiftDB()
         
         

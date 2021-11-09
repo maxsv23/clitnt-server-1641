@@ -27,10 +27,10 @@ class JsonDecodingToRealmDB {
 
 			do {
 				let decodeData = try JSONDecoder().decode(FriendsRealmSwiftModel.self, from: data!)
-				let verRealm = Realm.Configuration(schemaVersion:32)
+				let verRealm = Realm.Configuration(schemaVersion:35)
 				let realm = try Realm(configuration: verRealm)
 				realm.beginWrite()
-				let result = decodeData.response.items as List<FriendsItem>
+				let result = decodeData.response!.items as List<FriendsItem>
 				realm.add(result, update: .all)
 				try realm.commitWrite()
 				print(realm.configuration.fileURL ?? "")
