@@ -8,12 +8,12 @@
 import Foundation
 
 class EnumHost {
-    
+
     enum BaseURL: String {
         case auth = "oauth.vk.com"
         case api = "api.vk.com"
     }
-    
+
     enum Urlmodule: String {
         case auth = "/authorize"
         case friends = "/method/friends.get"
@@ -21,7 +21,4 @@ class EnumHost {
         case groupsSearch = "/method/groups.search"
         case photos = "/method/photos.getAll"
     }
-
-    
 }
-

@@ -9,7 +9,7 @@ import RealmSwift
 class FriendsRealmSwiftModel : Object,Codable {
 
    // @objc dynamic
-    @objc dynamic var response : FriendsResponse?
+    @objc dynamic var response : FriendsResponse
 
 
     enum CodingKeys: String, CodingKey {

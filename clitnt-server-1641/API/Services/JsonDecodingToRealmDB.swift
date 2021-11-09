@@ -15,35 +15,32 @@ import Foundation
 import RealmSwift
 
 class JsonDecodingToRealmDB {
-	
+
 	class func fetch<T:Object>(moduleDecod: T.Type, url: URL){
 		print(url)
-		
+
 		let task = URLSession.shared.dataTask(with: url){ (data, response , error) in
 			if let error = error {
 				print(error)
 				return
 			}
-	
+
 			do {
-				let response = try JSONDecoder().decode(FriendsRealmSwiftModel.self, from: data!)
-				let verRealm = Realm.Configuration(schemaVersion:25)
+				let decodeData = try JSONDecoder().decode(FriendsRealmSwiftModel.self, from: data!)
+				let verRealm = Realm.Configuration(schemaVersion:26)
 				let realm = try Realm(configuration: verRealm)
 				realm.beginWrite()
-				let result = response.response!.items as List<FriendsItem>
+				let result = decodeData.response.items
 				realm.add(result, update: .all)
 				try realm.commitWrite()
 				print(realm.configuration.fileURL ?? "")
-								
-				
-			
-				
+
 			}catch {
-				print("JSONDEC error")
+				print(error)
 			}
 
 		}
 		task.resume()
-		
+
 	}
 }

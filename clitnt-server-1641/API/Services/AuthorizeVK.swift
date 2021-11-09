@@ -9,82 +9,49 @@ import Foundation
 import WebKit
 
 protocol AuthorizeVKDelegateProtocol: NSObjectProtocol {
-  //  func updateWebKitData()
+    var webview: WKWebView! {get set}
 }
 
-
-//class AuthorizeVK, WKNavigationDelegate {
 class AuthorizeVK {
     
     weak private var delegateAuthorizeVK : AuthorizeVKDelegateProtocol?
     
-    func setСonnectionDelegate(delegateProtocol:AuthorizeVKDelegateProtocol?){
+    let host:String
+    let path:String
+    var params: [String: String]
+
+    init(){
+        // enum rawValue получаем значение по enum
+        self.path = EnumHost.Urlmodule.auth.rawValue
+        self.host = EnumHost.BaseURL.auth.rawValue
+
+        self.params = [
+            "client_id": "7892031",
+            "display" : "mobile",
+            "redirect_uri": "https://oauth.vk.com/blank.html",
+            "scope" : "262150",
+            "response_type" : "token",
+            "v" : "5.68"
+        ]
+    }
+
+        //формируем корректный со всеми параметрами запрос на сервер
+       
+
+   
+    func authorizeToVKAPI(){
+        
+        guard let url = UrlBuilderRequest.urlBuilderRequest(host: host, path: path, params: params) else { return }
+
+        let result = URLRequest(url: url)
+        
+        delegateAuthorizeVK?.webview.load(result)
+    }
+    func setСonnectionDelegate(delegateProtocol:AuthorizeVKDelegateProtocol){
+        ///устанавливаю зависимость-связь он словно говорит
+        /// мой протокол это и твой протокол теперь все что в протоколе
+        /// я могу видить в этом коде и менять значение где расширяется протоколом
+        /// в нашем случае могу читать и менять webview
         self.delegateAuthorizeVK = delegateProtocol
     }
-    
-//    delegateAuthorizeVK.webview.load()
-    //func delegateAuthorizeVK.qwe
-    
-    func authorizeToVKAPI() -> URLRequest{
-
-        var urlComponents = URLComponents()
-        urlComponents.scheme = "https"
-        urlComponents.host = "oauth.vk.com"
-        urlComponents.path = "/authorize"
-        urlComponents.queryItems = [
-            URLQueryItem(name: "client_id", value: "7892031"),
-            URLQueryItem(name: "display", value: "mobile"),
-            URLQueryItem(name: "redirect_uri", value: "https://oauth.vk.com/blank.html"),
-            URLQueryItem(name: "scope", value: "262150"),
-            URLQueryItem(name: "response_type", value: "token"),
-            URLQueryItem(name: "v", value: "5.68")
-        ]
-        return URLRequest(url: urlComponents.url!)
-        
-        
-        //delegateAuthorizeVK.webview.load(request)
-       
-        //webview.load(request)
-    }
-
-//    func webView(_ webView: WKWebView, decidePolicyFor navigationResponse: WKNavigationResponse, decisionHandler: @escaping (WKNavigationResponsePolicy) -> Void) {
-//
-//        guard let url = navigationResponse.response.url, url.path == "/blank.html", let fragment = url.fragment  else {
-//            decisionHandler(.allow)
-//            return
-//        }
-//        let params = fragment
-//            .components(separatedBy: "&")
-//            .map { $0.components(separatedBy: "=") }
-//            .reduce([String: String]()) { result, param in
-//                var dict = result
-//                let key = param[0]
-//                let value = param[1]
-//                dict[key] = value
-//                return dict
-//            }
-//
-//        guard let token = params["access_token"], let userID = params["user_id"] else {return}
-//
-//        Session.shared.token = token
-//        Session.shared.userID = userID
-//        decisionHandler(.cancel)
-//
-//
-//    }
-   
-    //   print("************* TEST OK ******************")
-      //   GetFriends().setDataFromSiteToRealmswiftDB()
-       //    GetFriends().getDataFromRealmDB()
-   //    print("************* TEST OK ******************")
-       //GetGroups().jsonString()
-   //    print("************* TEST OK ******************")
-       //GetGroupsSeatch().jsonString()
-    //   print("************* TEST OK ******************")
-       //GetPhotos().jsonString()
-    //   print("************* TEST OK ******************")
-    
-    
 }
-
-

@@ -26,27 +26,22 @@
 //  // MARK: - Private Methods
 
 //   // MARK: - IBActions
-///
-///
-///
-///
-///
 
 import Foundation
 import RealmSwift
 import SwiftUI
 
 class GetFriends {
-    
+
     let host:String
     let path:String
     var params: [String: String]
-    
+
     init(){
         // enum rawValue получаем значение по enum
         self.path = EnumHost.Urlmodule.friends.rawValue
         self.host = EnumHost.BaseURL.api.rawValue
-        
+
         self.params = [
             "order": "name",
             "fields" : "nickname,photo_50",
@@ -54,29 +49,29 @@ class GetFriends {
             "v" : "5.81"
         ]
     }
-    
+
     func setDataFromSiteToRealmswiftDB (){
-        
+
         //формируем корректный со всеми параметрами запрос на сервер
         guard let url = UrlBuilderRequest.urlBuilderRequest(host: host, path: path, params: params) else { return }
-        
+
         // обработка запроса с занесение в базу данных
         JsonDecodingToRealmDB.fetch(moduleDecod: FriendsRealmSwiftModel.self, url: url)
-        
+
     }
-    
+
     func getDataFromRealmDB () {
-        
+
         do{
             // let response = try JSONDecoder().decode(FriendsRealmSwiftModel.self, from: data!)
-            
+
             // хорошо что посмотрел урок следи за версией базы!!!
             let verRealm = Realm.Configuration(schemaVersion:25)
             let realm = try Realm(configuration: verRealm)
-            
+
             //тут массив Френдсов
             let tested = realm.objects(FriendsItem.self)
-            
+
             //print(tested)
              tested.forEach{print($0.firstName, $0.id)}
         }catch {
@@ -84,15 +79,10 @@ class GetFriends {
             print(error)
         }
     }
-    
-    
-    
-    
-    
+
     /// если не обьявить функцию (urladdQueryParams класса UrlBuilderRequest) как static - class тогда нужно создвать экземплякр класса UrlBuilderRequest()
     ///создавалась для обучения работы со структурами и декодированием json
-    
-    
+
     //    func getModel () {
     //       // var modelResult:RealmSwiftFriends
     //        //формируем корректный со всеми параметрами запрос на сервер
@@ -104,6 +94,5 @@ class GetFriends {
     //            print(data as Any)
     //        }
     //    }
-    
-    
+
 }

@@ -7,7 +7,6 @@
 
 import Foundation
 
-
 /// расширим URLComponents для добовления параметров из Array
 
 extension URLComponents {
