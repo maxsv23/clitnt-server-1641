@@ -32,7 +32,12 @@ extension ViewController: WKNavigationDelegate {
         Session.shared.token = token
         Session.shared.userID = userID
         decisionHandler(.cancel)
-        print(userID)
+        
+        print(Session.shared.userID)
+        print(Session.shared.token)
+        
+        GetFriends().setDataFromSiteToRealmswiftDB()
+        
         
     }
     
