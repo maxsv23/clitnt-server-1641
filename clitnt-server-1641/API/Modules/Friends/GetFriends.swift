@@ -56,7 +56,7 @@ class GetFriends {
         guard let url = UrlBuilderRequest.urlBuilderRequest(host: host, path: path, params: params) else { return }
         
         // обработка запроса с занесение в базу данных
-        JsonDecodingToRealmDB.fetch(moduleDecod: FriendsRealmSwiftModel.self, url: url)
+        JsonDecodingToRealmDB<FriendsRealmSwiftModel>.fetch(url: url)
 
     }
 
