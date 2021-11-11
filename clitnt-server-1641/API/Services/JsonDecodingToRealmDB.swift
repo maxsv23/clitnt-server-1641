@@ -14,26 +14,53 @@
 import Foundation
 import RealmSwift
 
-class JsonDecodingToRealmDB<TypeRealmModel:Decodable> {
+class JsonDecodingToRealmDB{
 
+
+	var www2:Int
 	
-	
+	init(){
+		self.www2 = 0
+	}
 	//class func fetch<T:Object>(moduleDecod: T.Type, url: URL){
-	class func fetch(url: URL){
+	
+	
+	
+func fetch<TypeRealmModel:Decodable> (_ metodRealm: TypeRealmModel.Type,_ url: URL){
 		
-		
-
-		let task = URLSession.shared.dataTask(with: url){ (data, response , error) in
+	
+	let task = URLSession.shared.dataTask(with: url){ [self] (data, response , error) in
 			if let error = error {
 				print(error)
 				return
 			}
-
+print(www2)
 			do {
 				let decodeData = try JSONDecoder().decode(TypeRealmModel.self, from: data!)
+				
+				//print(try TypeRealmModel(from: decodeData as! Decoder))
+				
+				//print(decodeData.response?.items as! FriendsRealmSwiftModel)
+				print(type(of: decodeData))
+				print((decodeData as! TypeRealmModel).response!.items )
+				//print(www2)
+			//	let aaaaa = decodeData.response!.items as! [ Any]
+//				if decodeData is FriendsRealmSwiftModel {
 //
-				if decodeData is FriendsRealmSwiftModel { print("sdfsfsdfsdfsdf") }
-			//	print(decodeData.response?.items as! TypeRealmModel.Type)
+//				}
+				
+			//	let result = //decodeData.response!.items as! TypeRealmModel
+				//let result = decodeData.response!.items as! FriendsRealmSwiftModel
+				
+				
+//					if decodeData is PhotosRealmSwiftModel {
+//						resultTypeModelRealm = decodeData as! FriendsRealmSwiftModel
+//
+//
+//					}
+				
+				
+				//print(decodeData.response?.items)
 //				print(trueDecodeData.response?.items)
 			//	guard let typeData = decodeData as? FriendsRealmSwiftModel else { return }
 
