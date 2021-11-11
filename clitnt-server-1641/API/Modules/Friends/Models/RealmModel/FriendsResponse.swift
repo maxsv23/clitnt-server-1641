@@ -7,10 +7,18 @@ import RealmSwift
 
 class FriendsResponse : Object,Codable {
 
-    @objc dynamic var count : Int = Int()
-    dynamic var items  = List<FriendsItem>()
+// если надо будет в базу сохранять этот обьект пишем как ниже
+//    @objc dynamic var count : Int = Int()
+//    dynamic var items  = List<FriendsItem>()
+    
+    //пишем если не надо сохранять обьект
+        var count : Int = Int()
+        var items  = List<FriendsItem>()
 
-
+    
+    
+    // эта магия с энумами и ниже если нам важно приходящие имена ассоциировать с нашими
+    // пример прихрдит id а мы хотим чтобы записывалось IDName
     enum CodingKeys: String, CodingKey {
         case count = "count"
         case items = "items"
