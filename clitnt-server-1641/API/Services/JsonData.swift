@@ -14,7 +14,7 @@
 import Foundation
 import RealmSwift
 
-class JsonDecodingToRealmDB{
+class JsonData{
 
 func fetch<TypeRealmModel:Decodable> (_ metodRealm: TypeRealmModel.Type,_ url: URL){
 		
@@ -27,12 +27,11 @@ func fetch<TypeRealmModel:Decodable> (_ metodRealm: TypeRealmModel.Type,_ url: U
 			}
 
 			do {
-				let decodeData = try JSONDecoder().decode(FriendsRealmSwiftModel.self, from: data!).response?.items
+				let decodeData = try JSONDecoder().decode(FriendsRealmSwiftModel.self, from: data!) //as! Dictionary<String>
 				
+				print(decodeData.response?.items as Any )
 				
-				
-				
-				
+			//	print(decodeData.response as! Any)
 				
 				
 				
@@ -40,7 +39,6 @@ func fetch<TypeRealmModel:Decodable> (_ metodRealm: TypeRealmModel.Type,_ url: U
 				
 				//print(decodeData.response?.items as! FriendsRealmSwiftModel)
 				//print(type(of: decodeData))
-				print(decodeData as Any)
 				//print(www2)
 			//	let aaaaa = decodeData.response!.items as! [ Any]
 //				if decodeData is FriendsRealmSwiftModel {

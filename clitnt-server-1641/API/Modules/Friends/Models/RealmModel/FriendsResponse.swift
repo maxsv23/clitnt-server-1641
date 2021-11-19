@@ -3,16 +3,16 @@
 //    Model file generated using JSONExport: https://github.com/Ahmed-Ali/JSONExport
 
 import Foundation
-import RealmSwift
 
-class FriendsResponse : Object,Codable {
+
+class FriendsResponse : Codable {
 
 // если надо будет в базу сохранять этот обьект пишем как ниже
 //    @objc dynamic var count : Int = Int()
 //    dynamic var items  = List<FriendsItem>()
     
     //пишем если не надо сохранять обьект
-        var count : Int = Int()
+       // var count : Int = Int()
         var items  = List<FriendsItem>()
 
     

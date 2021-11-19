@@ -7,7 +7,8 @@ struct ModelFriends: Codable {
 
 // MARK: - Response
 struct Response: Codable {
-    let count: Int
+  // если данные не нужны не пишем
+    //  let count: Int
     let items: [Item]
 }
 
