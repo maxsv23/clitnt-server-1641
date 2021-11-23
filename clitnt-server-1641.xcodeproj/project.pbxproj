@@ -32,6 +32,7 @@
 		88488DF3271FD87000D07012 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88488DF2271FD87000D07012 /* Assets.xcassets */; };
 		88488DF6271FD87000D07012 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88488DF4271FD87000D07012 /* LaunchScreen.storyboard */; };
 		885E7388272FAA4F009A285E /* ModelFriends.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885E7387272FAA4F009A285E /* ModelFriends.swift */; };
+		887F773C274CD25700F542ED /* FriendsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887F773B274CD25700F542ED /* FriendsResponse.swift */; };
 		8888B1C6273A8C8400609600 /* WKNavigationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8888B1C5273A8C8400609600 /* WKNavigationDelegate.swift */; };
 		888D29C927269E2E00A80BDA /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888D29C827269E2E00A80BDA /* Session.swift */; };
 		888D29CB2726B77E00A80BDA /* GetFriends.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888D29CA2726B77E00A80BDA /* GetFriends.swift */; };
@@ -72,6 +73,7 @@
 		88488DF5271FD87000D07012 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		88488DF7271FD87000D07012 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		885E7387272FAA4F009A285E /* ModelFriends.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelFriends.swift; sourceTree = "<group>"; };
+		887F773B274CD25700F542ED /* FriendsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsResponse.swift; sourceTree = "<group>"; };
 		8888B1C5273A8C8400609600 /* WKNavigationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WKNavigationDelegate.swift; sourceTree = "<group>"; };
 		888D29C827269E2E00A80BDA /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		888D29CA2726B77E00A80BDA /* GetFriends.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetFriends.swift; sourceTree = "<group>"; };
@@ -100,6 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				050EC47527382B8300C3AF00 /* FriendsRealmSwiftModel.swift */,
+				887F773B274CD25700F542ED /* FriendsResponse.swift */,
 				050EC47A27382D0100C3AF00 /* FriendsItem.swift */,
 			);
 			path = RealmModel;
@@ -472,6 +475,7 @@
 				88488DEE271FD86E00D07012 /* ViewController.swift in Sources */,
 				88488DEA271FD86E00D07012 /* AppDelegate.swift in Sources */,
 				050EC47627382B8300C3AF00 /* FriendsRealmSwiftModel.swift in Sources */,
+				887F773C274CD25700F542ED /* FriendsResponse.swift in Sources */,
 				0582CD22273B137E00695B77 /* GroupSeartchResponse.swift in Sources */,
 				0582CD0A273B0FE000695B77 /* PhotosSize.swift in Sources */,
 				88126CCF272A885100E92244 /* GetGroupsSeatch.swift in Sources */,
