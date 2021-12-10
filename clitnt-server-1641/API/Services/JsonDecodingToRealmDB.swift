@@ -17,7 +17,7 @@ import RealmSwift
 class JsonDecodingToRealmDB {
 
 	//class func fetch<T:Object>(moduleDecod: T.Type, url: URL){
-		class func fetch<T>(moduleDecod: T.Type, url: URL){
+	class func fetch<T: Decodable>(moduleDecod: T.Type, url: URL, completion: @escaping (Any) -> Void){
 
 
 		let task = URLSession.shared.dataTask(with: url){ (data, response , error) in
@@ -27,16 +27,19 @@ class JsonDecodingToRealmDB {
 			}
 
 			do {
-				let decodeData = try JSONDecoder().decode(FriendsRealmSwiftModel.self, from: data!)
+				let decodeData = try JSONDecoder().decode(T.self, from: data!)
 				//FriendsRealmSwiftModel строка только для тестирования 
 				
-				let verRealm = Realm.Configuration(schemaVersion:35)
-				let realm = try Realm(configuration: verRealm)
-				realm.beginWrite()
-				let result = decodeData.response!.items
-				realm.add(result, update: .all)
-				try realm.commitWrite()
-				print(realm.configuration.fileURL ?? "")
+				//let verRealm = Realm.Configuration(schemaVersion:36)
+				//let realm = try Realm(configuration: verRealm)
+				//realm.beginWrite()
+				
+				
+				completion(decodeData)
+				//RealmManager().setDataToRealm(result)
+				//realm.add(result, update: .all)
+				//try realm.commitWrite()
+				//print(realm.configuration.fileURL ?? "")
 
 			}catch {
 				print(error)

@@ -10,6 +10,7 @@
 		050EC47627382B8300C3AF00 /* FriendsRealmSwiftModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050EC47527382B8300C3AF00 /* FriendsRealmSwiftModel.swift */; };
 		050EC47827382BF200C3AF00 /* FriendsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050EC47727382BF200C3AF00 /* FriendsResponse.swift */; };
 		050EC47B27382D0100C3AF00 /* FriendsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050EC47A27382D0100C3AF00 /* FriendsItem.swift */; };
+		0565ABA4275D4CED008EFA10 /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0565ABA3275D4CED008EFA10 /* RealmManager.swift */; };
 		0582CD05273B0FE000695B77 /* PhotosLike.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0582CCFF273B0FE000695B77 /* PhotosLike.swift */; };
 		0582CD06273B0FE000695B77 /* PhotosRealmSwiftModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0582CD00273B0FE000695B77 /* PhotosRealmSwiftModel.swift */; };
 		0582CD07273B0FE000695B77 /* PhotosItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0582CD01273B0FE000695B77 /* PhotosItem.swift */; };
@@ -48,6 +49,7 @@
 		050EC47527382B8300C3AF00 /* FriendsRealmSwiftModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsRealmSwiftModel.swift; sourceTree = "<group>"; };
 		050EC47727382BF200C3AF00 /* FriendsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsResponse.swift; sourceTree = "<group>"; };
 		050EC47A27382D0100C3AF00 /* FriendsItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsItem.swift; sourceTree = "<group>"; };
+		0565ABA3275D4CED008EFA10 /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
 		0582CCFF273B0FE000695B77 /* PhotosLike.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotosLike.swift; sourceTree = "<group>"; };
 		0582CD00273B0FE000695B77 /* PhotosRealmSwiftModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotosRealmSwiftModel.swift; sourceTree = "<group>"; };
 		0582CD01273B0FE000695B77 /* PhotosItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotosItem.swift; sourceTree = "<group>"; };
@@ -329,6 +331,7 @@
 				889C30EE272938A5008EC612 /* JsonDecodingToRealmDB.swift */,
 				889C30F027294ABC008EC612 /* EnumHost.swift */,
 				889CCFC52738EEA1006CD488 /* AuthorizeVK.swift */,
+				0565ABA3275D4CED008EFA10 /* RealmManager.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -483,6 +486,7 @@
 				885E7388272FAA4F009A285E /* ModelFriends.swift in Sources */,
 				0582CD06273B0FE000695B77 /* PhotosRealmSwiftModel.swift in Sources */,
 				88126CCB272A87D400E92244 /* GetPhotos.swift in Sources */,
+				0565ABA4275D4CED008EFA10 /* RealmManager.swift in Sources */,
 				0582CD09273B0FE000695B77 /* PhotosResponse.swift in Sources */,
 				0582CD05273B0FE000695B77 /* PhotosLike.swift in Sources */,
 				0582CD08273B0FE000695B77 /* PhotosRepost.swift in Sources */,
